@@ -1,0 +1,49 @@
+body {
+  background-image: url("../images/uvdox.jpg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.registration_div{
+    /* background-color:#0454a4; */
+    /* opacity: 90%; */
+    height: 760px;
+}
+
+.form_center{
+/* background-color:#0454a4; */
+    padding: 5% 10%;
+    margin: 5% 10%;
+    border-radius: 5%;
+    /* margin: 10% 20%; */
+    /* opacity: 90%; */
+    /* margin-top: 100px; */
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.1),
+		rgba(255, 255, 255, 0.1)
+	);
+	backdrop-filter: blur(21px);
+	-webkit-backdrop-filter: blur(21px);
+	box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.36);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.form-label, .col-form-label {
+
+    /* color: white; */
+}
+
+.btn_submit{
+    margin-top: 30px;
+}
+
+.logo{
+    height: 100px;
+    margin: 15px 15px 15px 260px;
+}
+
+.heading{
+    /* color: white; */
+	text-align-last: center;
+}

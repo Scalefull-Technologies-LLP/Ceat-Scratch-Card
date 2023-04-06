@@ -1,0 +1,225 @@
+:root {
+  --white: #fff;
+  --red: hsl(18 100% 50%);
+  --green: hsl(130 52% 46%);
+  --yellow: hsl(44 83% 53%);
+  --blue: hsl(215 100% 53%);
+  --grey: hsl(0 0% 45%);
+  --text: var(--gray-5);
+  --transition: 0.2s;
+  --valid: var(--green);
+  --invalid: var(--red);
+  --focus: var(--yellow);
+  --blur: var(--indigo-1);
+  --disabled: var(--grey);
+}
+
+.body {
+  /* background-image: url("./images/uvdox.jpg"); */
+  /* background-color:#0454a4; */
+  /* background-repeat: no-repeat; */
+  /* Do not repeat the image */
+  /* background-size: cover; */
+}
+
+.registration_div {
+  opacity: 90%;
+  /* height: 760px; */
+  height: 100vh;
+}
+
+.uvdox_img {
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  /* border-radius: 4%; */
+  /* object-fit: cover;
+  object-position: 0 100%; */
+  /* height: 760px; */
+  width: 700px;
+  height: 100vh;
+  /* margin: 10px; */
+}
+
+.form_center {
+  background-color: #0454a4;
+  padding: 27% 23%;
+  margin: 5% 10%;
+  border-radius: 5%;
+}
+
+.form-label,
+.col-form-label {
+  font-family: sans-serif;
+  display: flex;
+  /* font-weight: bold; */
+  padding-right: 1rem;
+  transform-style: preserve-3d;
+  transition: color var(--transition);
+  color: var(--color);
+  /* font-size: 1.25rem; */
+  /* color: white; */
+}
+
+.btn_submit {
+  margin-top: 30px;
+}
+
+
+.logo {
+  height: 100px;
+  margin: 10px 10px 10px 190px;
+}
+
+
+.heading {
+  color: white;
+  text-align: center;
+}
+
+#name_error,
+#email_error,
+#mobile_error,
+#address_error {
+  /* color: #ff7851 */
+  color: rgb(255, 238, 0);
+  display: none;
+}
+
+input:focus-visible {
+  outline-color: var(--color);
+}
+
+.form-group:has(:invalid) {
+  --color: var(--invalid);
+}
+
+.form-group:has(:focus) {
+  --color: var(--focus);
+}
+
+.form-group:has(:valid) {
+  --color: var(--valid);
+}
+
+.form-group:has(:placeholder-shown) {
+  --color: var(--white);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .form-group:has(:valid) .form-label,
+  .col-form-label {
+    animation: wave 0.25s calc(var(--index) * 0.05s);
+  }
+
+  .form-group:has(:invalid:not(:focus)) {
+    animation: shake 0.2s;
+  }
+
+  #name_error,
+  #email_error,
+  #mobile_error,
+  #address_error {
+    animation: show-error 0.1s 0.2s both;
+  }
+}
+
+@keyframes show-error {
+  0% {
+    transform: translate(-50%, -100%) scale(0);
+  }
+}
+
+@keyframes wave {
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-2%);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(2%);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .uvdox_img {
+    display: none;
+  }
+  .logo {
+    height: 100px;
+    margin: 10px auto 20%;
+    display: block;
+  }
+  .form_center {
+  background-color: #0454a4;
+  padding: 5% 10%;
+  margin: 5% 5%;
+  border-radius: 5%;
+}
+#submit_btn{
+    display: block;
+    margin: 10% auto;
+}
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
+
+
+/* Scratch Card */
+
+.form_center .container {
+  background-color: white;
+  padding: 0;
+  border: 3px solid yellow;
+  position: relative;
+  width: 231px;
+  height: 231px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  -o-user-select: none;
+  user-select: none;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+}
+
+.form {
+  padding: 10px;
+}
