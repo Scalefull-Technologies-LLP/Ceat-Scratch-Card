@@ -34,7 +34,7 @@ $("#submit_btn").click(function () {
   let second = $("#second").val();
   let third = $("#third").val();
   let fourth = $("#fourth").val();
-  let otp = 3240;
+  let otp = 1234;
   let verify_otp = first + second + third + fourth;
  
   if (otp == verify_otp) {
